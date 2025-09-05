@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit Light', sans-serif;
+    scroll-behavior: smooth;
+    transition: 1s ease-out;
+}
+
+body {
+    background: hsl(217, 54%, 11%);
+}
+
+.card {
+    width: fit-content;
+    margin: 0px auto;
+    background: hsl(216, 50%, 16%);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 20px 20px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 40px;
+    margin-bottom: 300px;
+}
+
+.card-image img {
+    height: 325px;
+    width: 325px;
+    border-radius: 10px;
+}
+
+.card-heading .heading {
+    color: hsl(0, 0%, 100%);
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.eye, .blue {
+    display: none;
+}
+
+.card-text .text {
+    color: hsl(215, 51%, 70%);
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.card-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid hsl(215, 32%, 27%);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.blue {
+    background: hsl(178, 100%, 50%);
+    height: 325px;
+    width: 325px;
+    border-radius: 10px;
+    position: absolute;
+    opacity: 0.5;
+    text-align: center;
+}
+
+.eye {
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+    width: 50px;
+    position: absolute;
+}
+
+.card-details .ethereum {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: hsl(178, 100%, 50%);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.card-details .time {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: hsl(215, 51%, 70%);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.card-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.card-profile .avatar img {
+    border: 1px solid white;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+.card-profile-txt .card-profile-text {
+    color: hsl(215, 51%, 70%);
+    font-size: 18px;
+}
+
+.card-profile-span {
+    color: hsl(0, 0%, 100%);
+    font-size: 18px;
+}
+
+/* Active states */
+
+.card-heading .heading:hover {
+    color: hsl(178, 100%, 50%);
+}
+
+.card-profile-span:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+.card-image:hover {
+    cursor: pointer;
+}
+.card-image:hover~.blue {
+    display: block;
+    opacity: 0.1;
+}
+
+.card-image:hover~.eye {
+    display: block;
+    opacity: 1;
+}
